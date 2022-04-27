@@ -3,6 +3,12 @@ html{
   font-size: 8px;
   letter-spacing: 0.5px;
 }
+.ytlink {
+  color: white;
+}
+.ytlink:hover {
+  color: white;
+}
 body{
     font-family: "FFF Forward";
     overflow-x: hidden;
