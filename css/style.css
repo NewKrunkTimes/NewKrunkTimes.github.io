@@ -10,7 +10,6 @@ html{
   color: white;
 }
 body{
-    font-family: "FFF Forward";
     overflow-x: hidden;
     color: #303030;
 }
@@ -190,8 +189,12 @@ section{
 .navbar-expand-lg .navbar-nav .nav-link{
     padding: 0.625rem 1rem;
     font-weight: 700;
+    font-family: "FFF Forward";
 }
 
+.yttitle {
+  font-family: "FFF Forward";
+}
 
 .home-top-headlines{
     border: thin solid #ccc;
@@ -226,14 +229,25 @@ section{
     margin-bottom: 0.75rem;
     font-family: 'Alegreya Sans', sans-serif;
 }
+
 .post-title{
-    font-weight: 400;
+    font-weight: 100;
     line-height: 1.125em;
     margin-bottom: 0.5rem;
+    line-height: 20px;
+    font-family: "FFF Forward";
 }
+
+.articlepara p {
+  font-size: 15px;
+}
+
 .post-content{
-    line-height: 1.45rem;
+    line-height: 10px;
     margin-bottom: 0.5rem;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-family: "Arial", "sans-serif";
 }
 
 .post-media{
@@ -241,7 +255,7 @@ section{
 }
 .post-date{
     color: #999999;
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .post-overlay{
@@ -437,19 +451,41 @@ section{
 
 
 
-
+p {
+  line-height: 150%;
+  font-size: 110%;
+  font-weight: light;
+}
 
 .article-title{
+  font-family: "FFF Forward";
 }
+
 .article-title h1{
     font-weight: 700;
     font-size: 8px;
-    letter-spacing: -0.04em;
+    letter-spacing: 1px;
     margin-bottom: 1rem;
     margin-top: 0;
 }
+
+.article-title h2{
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.article-title h3{
+    font-size: 50%;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-family: "FFF Forward";
+}
+
 .article-date{
     margin-bottom: 1rem;
+    font-size: 10px;
 }
 .article-content{
 }
@@ -587,6 +623,9 @@ section{
       padding-top: 0px;
       padding-bottom: 0px;
     }
+
+
+
 }
 
 
