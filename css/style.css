@@ -107,6 +107,14 @@ section{
         max-width: 1340px;
     }
 }
+.arttit {
+  color: black;  
+  cursor: pointer;
+}
+
+.arttit:hover {
+  color: black;  
+}
 
 .navbar-toggler {
     border: none;
