@@ -3,13 +3,35 @@ html{
   font-size: 8px;
   letter-spacing: 0.5px;
 }
+
+:root {
+    --primary-color: #F9F4F5;
+    --secondary-color: #000;
+    --nav-active-color: #0079ad;
+    --nav-color: #009adb;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+    --option-color: #536390;
+}
+
+[data-theme="dark"] {
+    --primary-color: #333333;
+    --secondary-color: #F9F4F5;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #a6abb9;
+    --option-color: #9A97F3;
+}
+
 .ytlink {
-  color: white;
+  color: var(--secondary-color);
 }
 .ytlink:hover {
   color: white;
 }
 body{
+    background: var(--primary-color);
     overflow-x: hidden;
     color: #303030;
 }
@@ -41,9 +63,10 @@ section{
     margin-bottom: 3rem;
 }
 .section-navigation{
-  border-bottom: thin solid #cccccc;
+  border-bottom: thin solid var(--primary-color);
   padding-top: 10px;
   padding-bottom: 10px;
+  color: var(--primary-color);
 }
 .section-header .section-title{
     padding-bottom: 12px;
@@ -57,7 +80,9 @@ section{
     font-size: 8px;
     position: relative;
     padding-left: 64px;
-    background-color: #f0f0f0;
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
+    
 }
 .section-header .section-title:before{
     content: "\f054";
@@ -72,7 +97,7 @@ section{
     background-position: center;
     background-size: contain;
     top: 0px;
-    color: #ffffff;
+    color: var(--primary-color);
 }
 .section-header .section-title:after{
     content: '';
@@ -108,7 +133,7 @@ section{
     }
 }
 .arttit {
-  color: black;  
+  color: var(--secondary-color);  
   cursor: pointer;
 }
 
@@ -198,10 +223,16 @@ section{
     padding: 0.625rem 1rem;
     font-weight: 700;
     font-family: "FFF Forward";
+    color: var(--nav-color);
+}
+
+.nav-link:hover{
+  color: var(--nav-color);
 }
 
 .yttitle {
   font-family: "FFF Forward";
+  color: var(--secondary-color);
 }
 
 .home-top-headlines{
@@ -244,6 +275,7 @@ section{
     margin-bottom: 0.5rem;
     line-height: 20px;
     font-family: "FFF Forward";
+    color: var(--secondary-color);
 }
 
 .articlepara p {
@@ -256,6 +288,7 @@ section{
     font-size: 10px;
     letter-spacing: 1px;
     font-family: "Arial", "sans-serif";
+    color: var(--secondary-color);
 }
 
 .post-media{
@@ -323,6 +356,7 @@ section{
     line-height: 1.2;
     font-weight: 700;
     margin-bottom: 0;
+    color: var(--secondary-color);
 }
 .post-overlay:hover:before{
     opacity: 1;
@@ -467,6 +501,7 @@ p {
 
 .article-title{
   font-family: "FFF Forward";
+  color: var(--secondary-color);
 }
 
 .article-title h1{
@@ -475,12 +510,14 @@ p {
     letter-spacing: 1px;
     margin-bottom: 1rem;
     margin-top: 0;
+    color: var(--secondary-color);
 }
 
 .article-title h2{
     letter-spacing: 1px;
     margin-bottom: 1rem;
     margin-top: 0;
+    color: var(--secondary-color);
 }
 
 .article-title h3{
@@ -489,6 +526,7 @@ p {
     margin-bottom: 1rem;
     margin-top: 0;
     font-family: "FFF Forward";
+    color: var(--secondary-color);
 }
 
 .article-date{
@@ -634,4 +672,62 @@ p {
 
 
 
+}
+
+
+
+.theme-switch-wrapper {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  margin-bottom: -20px;
+}
+.theme-switch {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 12px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 12px;
+}
+
+input:checked + .slider {
+  background-color: #000;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
