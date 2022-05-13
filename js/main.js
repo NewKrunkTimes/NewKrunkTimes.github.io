@@ -1,6 +1,19 @@
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme');
 
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+    window.addEventListener('load', ()=>{
+    let isPlaying = false
+    let KrunkMarketBGAudio = document.querySelector('audio')
+    KrunkMarketBGAudio.addEventListener('play',()=>{isPlaying = true})
+    document.addEventListener('click',() => {
+        if(!isPlaying){
+            KrunkMarketBGAudio.play()
+        }
+    }, {once: true})
+})
+
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
   
@@ -18,5 +31,3 @@ function switchTheme(e) {
           localStorage.setItem('theme', 'light');
     }    
 }
-
-toggleSwitch.addEventListener('change', switchTheme, false);
